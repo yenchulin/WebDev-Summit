@@ -258,6 +258,7 @@ Solution:
 - Support multi-size selection for merchandise (M x 1 and S x 1)
 - Support i18n
 - Session filters (sort by the same track)
+- Standardize coding styles (sort imports, sort class names)
 
 Improve UX:
 
