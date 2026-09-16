@@ -27,7 +27,9 @@ const isFullNameValid = computed(() => attendee.fullName.trim() !== '')
 const isEmailRequired = computed(() => attendee.email.trim() !== '')
 const isEmailFormatValid = computed(() => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(attendee.email.trim()))
 const isPhoneRequired = computed(() => attendee.phone.trim() !== '')
-const isPhoneFormatValid = computed(() => /^[+\d][\d\s\-()]{6,}$/.test(attendee.phone.trim()))
+const isPhoneFormatValid = computed(() =>
+  /^(?=(?:\D*\d){10,15}\D*$)\+?[\d\s\-()]+$/.test(attendee.phone.trim())
+)
 const isCompanyValid = computed(() => attendee.company.trim() !== '')
 const isJobTitleValid = computed(() => attendee.jobTitle.trim() !== '')
 const isShippingAddressValid = computed(() =>
@@ -40,9 +42,11 @@ const isAttendeeValid = computed(() =>
 function validateAttendee() {
   attendeeErrorMsgs.fullName.required = isFullNameValid.value ? '' : 'Full name is required'
   attendeeErrorMsgs.email.required = isEmailRequired.value ? '' : 'Email is required'
-  attendeeErrorMsgs.email.format = isEmailFormatValid.value ? '' : 'Email is invalid'
+  attendeeErrorMsgs.email.format =
+    isEmailRequired.value && !isEmailFormatValid.value ? 'Email is invalid' : ''
   attendeeErrorMsgs.phone.required = isPhoneRequired.value ? '' : 'Phone number is required'
-  attendeeErrorMsgs.phone.format = isPhoneFormatValid.value ? '' : 'Phone number is invalid'
+  attendeeErrorMsgs.phone.format =
+    isPhoneRequired.value && !isPhoneFormatValid.value ? 'Phone number is invalid' : ''
   attendeeErrorMsgs.company.required = isCompanyValid.value ? '' : 'Company is required'
   attendeeErrorMsgs.jobTitle.required = isJobTitleValid.value ? '' : 'Job title is required'
   attendeeErrorMsgs.shippingAddress.required = isShippingAddressValid.value
@@ -57,6 +61,12 @@ function resetAttendee() {
   attendee.company = ''
   attendee.jobTitle = ''
   attendee.shippingAddress = ''
+}
+
+function resetAttendeeErrorMsgs() {
+  for (const field in attendeeErrorMsgs) {
+    attendeeErrorMsgs[field] = { required: '', format: '' }
+  }
 }
 
 /** ticket selection */
@@ -135,6 +145,10 @@ function validateSelectedSessions() {
 
 function resetSessionSelection() {
   selectedSessionIds.value = new Set([])
+}
+
+function resetSelectedSessionErrorMsg() {
+  selectedSessionErrorMsg.value = ''
 }
 
 /** addons selection */
@@ -230,8 +244,10 @@ const totalPrice = computed(() =>
 
 function resetWizardState() {
   resetAttendee()
+  resetAttendeeErrorMsgs()
   resetTicketSelection()
   resetSessionSelection()
+  resetSelectedSessionErrorMsg()
   resetAddonSelection()
 }
 
