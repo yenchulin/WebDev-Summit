@@ -3,6 +3,7 @@ dist
 .quasar
 *.local
 .DS_Store
+.vitest/
 
 # Yarn
 .yarn/*
