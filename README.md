@@ -4,9 +4,9 @@ A multi-step event registration application built with Vue 3, Quasar, and UnoCSS
 
 The application guides users through attendee information, session selection, add-ons, and order review while handling cross-step state, form validation, session conflicts, dynamic pricing, and submission flow.
 
-## Features
+## ⚙️ Features
 
-### Attendee Registration
+### 1️⃣ Attendee Registration
 
 ![attendee-info screenshot](https://github.com/yenchulin/WebDev-Summit/raw/main/doc/attendee-info.png)
 
@@ -15,7 +15,7 @@ The application guides users through attendee information, session selection, ad
 - Dynamically requires a shipping address when merchandise is selected
 - Supports General, VIP, and Student ticket types
 
-### Session Selection
+### 2️⃣ Session Selection
 
 ![sessions screenshot](https://github.com/yenchulin/WebDev-Summit/raw/main/doc/sessions.png)
 
@@ -24,7 +24,7 @@ The application guides users through attendee information, session selection, ad
 - Prevents selection of sessions that have reached capacity
 - Detects overlapping session selections during validation
 
-### Add-ons
+### 3️⃣ Add-ons
 
 ![add-ons screenshot](https://github.com/yenchulin/WebDev-Summit/raw/main/doc/add-ons.png)
 
@@ -35,7 +35,7 @@ The application guides users through attendee information, session selection, ad
 - Calculates the order total dynamically
 - Applies the VIP discount to eligible workshops
 
-### Review & Submission
+### 4️⃣ Review & Submission
 
 ![review screenshot](https://github.com/yenchulin/WebDev-Summit/raw/main/doc/review.png)
 
@@ -46,7 +46,7 @@ The application guides users through attendee information, session selection, ad
 - Navigates users to the relevant step when validation errors occur
 - Displays a confirmation screen after successful submission
 
-## Tech Stack
+## 💻 Tech Stack
 
 | Category        | Technologies     |
 | --------------- | ---------------- |
@@ -59,7 +59,7 @@ The application guides users through attendee information, session selection, ad
 | Code Quality    | ESLint, Prettier |
 | Package Manager | Yarn             |
 
-## Frontend Architecture
+## 🏠 Frontend Architecture
 
 The application uses a component-based architecture with composables for shared state and business logic.
 
@@ -96,7 +96,7 @@ The application extracts reusable logic into composables, including:
 
 Derived values are primarily handled with Vue `computed` properties rather than manually synchronizing state with watchers.
 
-## Key Frontend Challenges
+## 🏆 Key Challenges
 
 ### Cross-Step Validation
 
@@ -145,7 +145,7 @@ Common UI patterns are extracted into reusable components, including:
 
 This keeps page-level components focused on composition and user flow rather than UI implementation.
 
-## Design System
+## 🎨 Design System
 
 The UI uses design tokens through UnoCSS rather than hardcoded color values.
 
@@ -157,7 +157,7 @@ Examples include:
 
 This keeps styling consistent with the provided design system and makes semantic visual changes easier to maintain.
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Requirements
 
@@ -188,7 +188,7 @@ http://localhost:9000
 yarn build
 ```
 
-## Testing
+### Testing
 
 Unit tests are written with Vitest.
 
@@ -196,7 +196,7 @@ Unit tests are written with Vitest.
 yarn test
 ```
 
-## Development Process
+## 🧠 Development Process
 
 This project was originally completed as a frontend engineering assessment.
 
