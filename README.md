@@ -8,6 +8,8 @@ The application guides users through attendee information, session selection, ad
 
 ### Attendee Registration
 
+![attendee-info screenshot](https://github.com/yenchulin/WebDev-Summit/raw/main/doc/attendee-info.png)
+
 - Collects attendee information including name, email, phone, company, and job title
 - Supports optional shipping address
 - Dynamically requires a shipping address when merchandise is selected
@@ -15,12 +17,16 @@ The application guides users through attendee information, session selection, ad
 
 ### Session Selection
 
+![sessions screenshot](https://github.com/yenchulin/WebDev-Summit/raw/main/doc/sessions.png)
+
 - Groups sessions by conference date
 - Displays session information including speaker, time, track, and remaining capacity
 - Prevents selection of sessions that have reached capacity
 - Detects overlapping session selections during validation
 
 ### Add-ons
+
+![add-ons screenshot](https://github.com/yenchulin/WebDev-Summit/raw/main/doc/add-ons.png)
 
 - Groups add-ons into workshops, meal packages, and merchandise
 - Detects workshop conflicts with selected sessions
@@ -30,6 +36,8 @@ The application guides users through attendee information, session selection, ad
 - Applies the VIP discount to eligible workshops
 
 ### Review & Submission
+
+![review screenshot](https://github.com/yenchulin/WebDev-Summit/raw/main/doc/review.png)
 
 - Provides a complete summary before submission
 - Displays itemized pricing and the final total
