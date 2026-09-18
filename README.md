@@ -40,7 +40,7 @@ The application guides users through attendee information, session selection, ad
 ![review screenshot](https://github.com/yenchulin/WebDev-Summit/raw/main/doc/review.png)
 
 - Provides a complete summary before submission
-- Displays itemized pricing and the final total
+- Displays item prices and the final total
 - Allows users to return to previous steps and edit their selections
 - Performs unified validation across all registration steps
 - Navigates users to the relevant step when validation errors occur
@@ -91,8 +91,8 @@ This separation keeps shared registration state centralized while avoiding unnec
 
 The application extracts reusable logic into composables, including:
 
-- `useRegistrationWizard.js` — shared registration state, pricing, and derived data
-- `useWizardSteps.js` — step navigation and wizard flow
+- `useRegistrationWizard.js`: shared registration state, pricing, and derived data
+- `useWizardSteps.js`: step navigation and wizard flow
 
 Derived values are primarily handled with Vue `computed` properties rather than manually synchronizing state with watchers.
 
@@ -143,7 +143,7 @@ Common UI patterns are extracted into reusable components, including:
 - `ReviewBlock`
 - `BaseButton`
 
-This keeps page-level components focused on composition and user flow rather than low-level UI implementation.
+This keeps page-level components focused on composition and user flow rather than UI implementation.
 
 ## Design System
 
@@ -190,7 +190,7 @@ yarn build
 
 ## Testing
 
-Unit tests are written with **Vitest**.
+Unit tests are written with Vitest.
 
 ```bash
 yarn test
@@ -200,6 +200,6 @@ yarn test
 
 This project was originally completed as a frontend engineering assessment.
 
-The development process, architecture decisions, dependency choices, AI-assisted development, challenges, and potential improvements are documented in `[PLAN.md](./PLAN.md)`.
+The development process, architecture decisions, dependency choices, AI-assisted development, challenges, and potential improvements are documented in [PLAN.md](./PLAN.md).
 
 AI tools were used as part of the development workflow for exploring implementation approaches and accelerating UI development. All generated code was reviewed, simplified, and manually verified before integration.
