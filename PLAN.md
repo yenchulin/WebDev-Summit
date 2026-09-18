@@ -42,7 +42,7 @@ Since the number of steps is fixed and the flow is linear, using routing would a
 
 ### State Management
 
-I seperated state into two categories:
+I separated state into two categories:
 
 #### Shared state (global)
 
@@ -87,7 +87,7 @@ This keeps global state minimal while maintaining flexibility in UI.
   ```
 
 - **Addon selection state:**
-  Besides merchandise, the select status of workshop and meals category can be `quantiy == 0 or 1`, which is easier for price calculation.
+  Besides merchandise, the select status of workshop and meals category can be `quantity == 0 or 1`, which is easier for price calculation.
 
   ```js
   // reactive object
@@ -123,7 +123,7 @@ This avoids exposing unnecessary data while keeping logic efficient.
 
   since there are two types of errors with email and phone (empty and format).
 
-- Seperate checks for each field and each type of error.
+- Separate checks for each field and each type of error.
   ex. `isEmailRequired` for empty states and `isEmailFormatValid` for format errors.
 
 - Validation is triggered on submit with `validateAttendeeInfo()`, which will update the reactive object and shown errors in Review step and input fields.
